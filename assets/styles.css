@@ -108,14 +108,25 @@ p{margin:0 0 .6rem}
 
 /* CTA: single primary + inline email */
 .actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:4px}
-.btn{
-  display:inline-block;padding:12px 18px;border-radius:12px;
-  background:linear-gradient(135deg,var(--brand),var(--brand-2));
-  color:#0b1020;font-weight:700;box-shadow:0 10px 24px rgba(63,188,192,.25)
+.btn, 
+.email-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #1ABC9C; /* Teal background */
+  color: #0B1E36; /* Dark blue text */
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
 }
-.btn:hover{text-decoration:none;transform:translateY(-1px)}
-.or{color:var(--muted-ink)}
-.inline-email{font-weight:600}
+
+.btn:hover, 
+.email-btn:hover {
+  background-color: #16a085; /* Slightly darker teal */
+  color: #062540; /* Darker blue text */
+  transform: translateY(-2px);
+}
 
 /* Hero sizing to reduce scrolling on laptops */
 .hero{
@@ -206,21 +217,4 @@ p{margin:0 0 .6rem}
       margin-bottom: 1.5rem;
       color: #333;
     }
-  
-.email-btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #1ABC9C; /* Teal background */
-  color: #0B1E36; /* Dark blue text */
-  font-weight: 600;
-  border-radius: 6px;
-  text-decoration: none;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
-}
 
-.email-btn:hover {
-  background-color: #16a085; /* Slightly darker teal on hover */
-  color: #062540; /* Even darker blue text on hover */
-  transform: translateY(-2px);
-}
