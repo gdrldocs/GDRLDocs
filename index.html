@@ -7,19 +7,19 @@
   <title>GDRLdocs — Documentation & Writing Studio</title>
   <meta name="description" content="End‑to‑end writing for products and brands—technical docs, curriculum, UX microcopy, long‑form content, copywriting, scripts, ebooks, ghostwriting, and more." />
   <meta name="theme-color" content="#0B1E36" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/styles.css" />
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
   <div class="layout">
-    <!-- Left sidebar (now in full navy) -->
+    <!-- Left sidebar (navy, minimal, email link only) -->
     <aside class="sidenav" aria-label="Primary">
       <a class="brand" href="/" aria-label="GDRLdocs Home">
-        <img src="/images/logo.jpg" alt="GDRLdocs logo" class="logo-img" />
+        <img src="/assets/logo.jpg" alt="GDRLdocs logo" class="logo-img" />
         <span class="brand-text">
           <strong>GDRLdocs</strong>
           <em>Great Documentation in Refined Language</em>
@@ -29,47 +29,82 @@
         <a class="active" href="/">Home</a>
         <a href="/services.html">Services</a>
         <a href="/about.html">About</a>
-        <a class="cta" href="/contact.html">Book a Call</a>
-        <a class="email" href="mailto:contact@gdrldocs.com">Email Us</a>
       </nav>
       <footer class="sidefoot">
+        <a class="email" href="mailto:contact@gdrldocs.com">contact@gdrldocs.com</a>
         <small>© <span id="year"></span> GDRLdocs</small>
       </footer>
     </aside>
 
-    <!-- One-screen hero with offerings (no scrolling on common laptop widths) -->
+    <!-- Main content (designed to fit above the fold on common laptops) -->
     <main id="main" class="content">
-      <section class="hero card">
+      <section class="card hero light">
         <p class="tag">Writing • Editing • Formatting</p>
-        <h1>Your one‑stop studio for words that work</h1>
+        <h1>Your one‑stop studio for writing that works</h1>
         <p class="sub">
           Big idea? Tiny brief? Doesn’t matter. We’ll shape it into words that stick and stories that sell.
         </p>
 
-        <!-- Compact, above-the-fold offerings -->
-        <div class="offerings">
-          <div class="pill"><span>Technical Documentation</span></div>
-          <div class="pill"><span>Curriculum & Learning Content</span></div>
-          <div class="pill"><span>UX Writing & Microcopy</span></div>
-          <div class="pill"><span>Content & Blogs</span></div>
-          <div class="pill"><span>Copywriting</span></div>
-          <div class="pill highlight"><span>Executive Ghostwriting</span></div>
-          <div class="pill"><span>Scripts (Promo/Voice‑over)</span></div>
-          <div class="pill"><span>Ebook Formatting</span></div>
-          <div class="pill"><span>Editing & Proofreading</span></div>
+        <!-- Expandable offerings: compact A1 grid of mini‑accordions -->
+        <div class="offerings-grid">
+          <details class="offer">
+            <summary>Technical Documentation</summary>
+            <p>User/admin/solution guides, API docs, how‑tos, release notes, in‑app help.</p>
+          </details>
+
+          <details class="offer">
+            <summary>Curriculum & Learning Content</summary>
+            <p>Lesson plans, scripts, assessments, facilitator guides, workbooks.</p>
+          </details>
+
+          <details class="offer">
+            <summary>UX Writing & Microcopy</summary>
+            <p>UI strings, tooltips, flows, error/empty states, onboarding checklists.</p>
+          </details>
+
+          <details class="offer">
+            <summary>Content & Blogs</summary>
+            <p>Articles, newsletters, case studies, SEO briefs, founder letters.</p>
+          </details>
+
+          <details class="offer">
+            <summary>Copywriting</summary>
+            <p>Landing pages, ad copy, taglines, product messaging, emails.</p>
+          </details>
+
+          <details class="offer">
+            <summary>Ghostwriting</summary>
+            <p>Executive blogs, LinkedIn posts, op‑eds, keynote scripts—your voice, our words.</p>
+          </details>
+
+          <details class="offer">
+            <summary>Scripts (Promo/Voice‑over)</summary>
+            <p>20–60s promos, explainers, reels, YouTube VO scripts.</p>
+          </details>
+
+          <details class="offer">
+            <summary>Ebook Formatting</summary>
+            <p>KDP/EPUB layout, TOC, images, front/back matter, print‑ready.</p>
+          </details>
+
+          <details class="offer">
+            <summary>Editing & Proofreading</summary>
+            <p>Line edit, copyedit, style/consistency checks, final proof.</p>
+          </details>
         </div>
 
-        <!-- Soft outcomes for solo founders/startups -->
-        <ul class="bullets">
-          <li>Launch content faster, without the heavy lift.</li>
+        <!-- Soft outcomes for founders/startups -->
+        <ul class="bullets soft">
+          <li>Launch content faster—without the heavy lift.</li>
           <li>Keep a consistent voice across product and brand.</li>
-          <li>Get files ready to publish—web, print, or ebook.</li>
+          <li>Files ready to publish: web, print, or ebook.</li>
         </ul>
 
-        <!-- Only two CTAs total on the page -->
+        <!-- CTA strategy B1: single primary button + inline email -->
         <div class="actions">
           <a class="btn" href="/contact.html">Book a Call</a>
-          <a class="btn ghost" href="mailto:contact@gdrldocs.com">Email Us</a>
+          <span class="or">or</span>
+          <a class="inline-email" href="mailto:contact@gdrldocs.com">Email us</a>
         </div>
       </section>
     </main>
