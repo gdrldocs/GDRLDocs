@@ -1,11 +1,10 @@
-<!-- FILE: contact.html -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact – GDRLdocs</title>
-  <meta name="description" content="Get in touch with GDRLdocs for writing, editing, and formatting services. Email us or book a call." />
+  <meta name="description" content="Get in touch with GDRLdocs for writing, editing, and formatting services. Email us anytime." />
   <meta name="theme-color" content="#0B1E36" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,37 +38,21 @@
 
     <!-- Main content -->
     <main id="main" class="content">
-      <!-- Hero / intro -->
       <section class="card light" aria-labelledby="contact-title">
         <h1 id="contact-title">Let’s connect</h1>
         <p class="sub">Do you have questions, ideas, or a writing project to discuss? Reach out to us and we’ll reply promptly.</p>
       </section>
 
-      <!-- Email section -->
+      <!-- Email only -->
       <section class="card light" aria-labelledby="email-title">
         <h2 id="email-title">Email us</h2>
-        <p>Prefer writing it out? Send a note to <a href="mailto:contact@gdrldocs.com">contact@gdrldocs.com</a>.</p>
-      </section>
-
-      <!-- Book a call (anchor target) -->
-      <section id="book" class="card light" aria-labelledby="book-title" tabindex="-1">
-        <h2 id="book-title">Book a call</h2>
-        <p>Want to talk it through? A quick call will help us understand your goals and timelines. Leave your phone number with us so that we can contact you.</p>
-        <!-- Replace the placeholder link with your Calendly/Meet/Zoom booking URL when ready -->
-        <a class="btn" href="#" aria-disabled="true">Schedule (link coming soon)</a>
-        <p class="sub" style="margin-top:.5rem">No link yet? Just <a href="mailto:contact@gdrldocs.com">email us</a> with a few time slots.</p>
+        <p>Send your query to <a href="mailto:contact@gdrldocs.com">contact@gdrldocs.com</a> and we’ll get back soon.</p>
       </section>
     </main>
   </div>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    // If navigated to #book, bring it into view nicely
-    if (location.hash === '#book') {
-      const el = document.getElementById('book');
-      el && el.focus({preventScroll:true});
-      el && el.scrollIntoView({behavior:'smooth', block:'start'});
-    }
   </script>
 </body>
 </html>
