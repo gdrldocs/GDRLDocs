@@ -2,17 +2,18 @@
 
 /* ---- Design tokens (Calm Slate + Cyan) ---- */
 :root {
-  --bg: #0f172a;        /* slate-900 */
-  --panel: #0b1220;     /* deep navy */
-  --card: #111827;      /* gray-900 */
-  --text: #e2e8f0;      /* slate-200 */
-  --muted: #94a3b8;     /* slate-400 */
-  --brand: #22d3ee;     /* cyan-400 */
-  --accent: #a78bfa;    /* violet-400 */
-  --border: rgba(255,255,255,.08);
-  --ring: rgba(34,211,238,.35);
-  --shadow: 0 10px 30px rgba(0,0,0,.30);
+  --bg: #0B1E36;        /* matches logo navy */
+  --panel: #0B1E36;     /* same for simplicity */
+  --card: #122540;      /* slightly lighter navy for cards */
+  --text: #FFFFFF;      /* pure white text */
+  --muted: #B0B8C4;     /* muted gray text */
+  --brand: #3CBCC0;     /* teal accent from logo */
+  --accent: #5FD4D7;    /* lighter teal for hovers/gradients */
+  --border: rgba(255,255,255,.12);
+  --ring: rgba(63,188,192,.4);
+  --shadow: 0 10px 30px rgba(0,0,0,.45);
 }
+
 
 /* ---- Base ---- */
 * { box-sizing: border-box; }
