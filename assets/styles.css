@@ -184,3 +184,7 @@ p{margin:0 0 .6rem}
   line-height: 1.6;
 }
 
+.intro-pitch { color: var(--ink); }
+.intro-pitch p { margin: 0.4rem 0; }
+
+
