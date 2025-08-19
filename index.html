@@ -1,58 +1,148 @@
-<!-- ===================== FILE: index.html ===================== -->
-<div class="step"><span>4</span><strong>Publish</strong><p>Deliver source or open a PR. Optional: localization handoff.</p></div>
-</div>
-</section>
+<!-- FILE: index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GDRLdocs — Documentation & Writing Studio</title>
+  <meta name="description" content="End‑to‑end writing for products and brands—technical docs, curriculum, UX microcopy, long‑form content, copywriting, scripts, ebooks, ghostwriting, and more." />
+  <meta name="theme-color" content="#0f172a" />
 
+  <!-- Open Graph (optional but helpful) -->
+  <meta property="og:title" content="GDRLdocs — Documentation & Writing Studio" />
+  <meta property="og:description" content="End‑to‑end writing for products and brands—technical docs, curriculum, UX microcopy, long‑form content, copywriting, scripts, ebooks, ghostwriting, and more." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gdrldocs.com/" />
 
-<section class="grid three">
-<article class="card">
-<div class="eyebrow">Case Study</div>
-<h3>Reduced support tickets by 28%</h3>
-<p>Re‑structured solution guides and added in‑product help for a data‑protection suite.</p>
-</article>
-<article class="card">
-<div class="eyebrow">Docs‑as‑Code</div>
-<h3>Migrated docs to Git & CI</h3>
-<p>Style checks and review workflows improved release velocity.</p>
-</article>
-<article class="card">
-<div class="eyebrow">UX Writing</div>
-<h3>Onboarding that converts</h3>
-<p>Friendly, task‑led microcopy that improved activation.</p>
-</article>
-</section>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
 
+  <div class="layout">
+    <!-- Left sidebar navigation -->
+    <aside class="sidenav" aria-label="Primary">
+      <a class="brand" href="/">
+        <span class="logo" aria-hidden="true"></span>
+        <span class="brand-text">
+          <strong>GDRLdocs</strong>
+          <em>Great Documentation in Refined Language</em>
+        </span>
+      </a>
+      <nav>
+        <a class="active" href="/">Home</a>
+        <a href="/services.html">Services</a>
+        <a href="/process.html">Process</a>
+        <a href="/work.html">Work</a>
+        <a href="/pricing.html">Pricing</a>
+        <a href="/about.html">About</a>
+        <a class="cta" href="/contact.html" aria-label="Get a Quote">Get a Quote</a>
+      </nav>
+      <footer class="sidefoot">
+        <small>© <span id="year"></span> GDRLdocs</small>
+        <a class="email" href="mailto:contact@gdrldocs.com">contact@gdrldocs.com</a>
+      </footer>
+    </aside>
 
-<section class="card">
-<h2>Pricing</h2>
-<div class="grid three">
-<div class="price card lite">
-<h4>Starter</h4>
-<div class="amt">₹15,000+</div>
-<p>Single page or short article. Light research. 1 revision.</p>
-</div>
-<div class="price card focus">
-<h4>Standard</h4>
-<div class="amt">₹45,000+</div>
-<p>Feature doc set or blog series. SME interviews. 2 revisions.</p>
-</div>
-<div class="price card lite">
-<h4>Program</h4>
-<div class="amt">Custom</div>
-<p>Ongoing docs ownership, release notes, governance.</p>
-</div>
-</div>
-<p class="sub">Add‑ons: IA, style‑guide, localization prep, diagrams.</p>
-</section>
+    <!-- Main content -->
+    <main id="main" class="content">
+      <!-- Hero -->
+      <section class="card hero">
+        <p class="tag">Documentation & Writing Studio</p>
+        <h1>Documentation that helps users succeed</h1>
+        <p class="lead">
+          We translate complex products into clear, helpful docs—so onboarding is faster and support tickets drop.
+        </p>
+        <div class="actions">
+          <a class="btn" href="/contact.html">Get a Quote</a>
+          <a class="btn ghost" href="/work.html">See our Work</a>
+        </div>
+      </section>
 
+      <!-- Value pillars -->
+      <section class="grid four" aria-label="Core Services">
+        <article class="card pill">
+          <p class="eyebrow">Core</p>
+          <h2>Technical Writing</h2>
+          <p>Release notes, solution/admin guides, API docs, how‑tos.</p>
+        </article>
+        <article class="card pill">
+          <p class="eyebrow">Product</p>
+          <h2>UX Writing</h2>
+          <p>Microcopy, empty states, in‑app tips, onboarding flows.</p>
+        </article>
+        <article class="card pill">
+          <p class="eyebrow">Growth</p>
+          <h2>Content & Case Studies</h2>
+          <p>Blogs, ebooks, customer stories, thought leadership.</p>
+        </article>
+        <article class="card pill">
+          <p class="eyebrow">Quality</p>
+          <h2>Copyediting & Governance</h2>
+          <p>Style guides, docs QA, localization readiness, terminology.</p>
+        </article>
+      </section>
 
-<section class="card">
-<h2>Let’s work together</h2>
-<p class="sub">Tell us about your product and what you need. We’ll reply with a plan and estimate.</p>
-<a class="btn" href="/contact.html">Contact us</a>
-</section>
-</main>
-</div>
-<script>document.getElementById('y')?.textContent=new Date().getFullYear();</script>
+      <!-- Why GDRLdocs -->
+      <section class="card">
+        <h2>Why GDRLdocs</h2>
+        <ul class="bullets">
+          <li>Docs‑as‑code workflows that fit engineering.</li>
+          <li>Empathy for users; precision for product.</li>
+          <li>Fast, friendly reviews with tracked changes.</li>
+          <li>20+ years of senior writing leadership.</li>
+        </ul>
+      </section>
+
+      <!-- Outcomes -->
+      <section class="grid three" aria-label="Outcome Highlights">
+        <article class="card outcome">
+          <h3>Onboarding clarity</h3>
+          <p>Faster time‑to‑first‑success with task‑led guidance.</p>
+        </article>
+        <article class="card outcome">
+          <h3>Lower support load</h3>
+          <p>Fewer “how do I…?” tickets with in‑product help.</p>
+        </article>
+        <article class="card outcome">
+          <h3>Release confidence</h3>
+          <p>Consistent notes and up‑to‑date guides every cycle.</p>
+        </article>
+      </section>
+
+      <!-- Ghostwriting callout -->
+      <section class="card callout">
+        <div class="callout-body">
+          <p class="eyebrow">For Leaders</p>
+          <h2>Executive Ghostwriting</h2>
+          <p>
+            Thought leadership without the time crunch—blogs, LinkedIn posts, keynote scripts, and op‑eds in your voice.
+          </p>
+          <a class="btn" href="/contact.html">Discuss ghostwriting</a>
+        </div>
+      </section>
+
+      <!-- Testimonial -->
+      <section class="card quote">
+        <blockquote>
+          “They transformed dense specs into intuitive guides. Our team saved hours.”
+        </blockquote>
+        <cite>— Product Manager, SaaS</cite>
+      </section>
+
+      <!-- Final CTA -->
+      <section class="card final-cta">
+        <h2>Ready to make your docs work harder?</h2>
+        <a class="btn" href="/contact.html">Get a Quote</a>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
