@@ -4,14 +4,14 @@
 :root{
   --bg: #0B1E36;        /* deep navy backdrop */
   --panel: #0B1E36;     /* sidebar/nav background */
-  --card: #122540;      /* darker card (if needed) */
+  --card: #122540;      /* navy card surface */
   --surface: #FFFFFF;   /* white content surfaces */
   --ink: #0B1E36;       /* text on white */
   --text: #FFFFFF;      /* text on navy */
   --muted: #B0B8C4;     /* secondary on navy */
   --muted-ink: #4B5A73; /* secondary on white */
   --brand: #3CBCC0;     /* teal accent */
-  --brand-2: #5FD4D7;   /* lighter teal (hover) */
+  --brand-2: #16A085;   /* darker teal hover */
   --border: rgba(11,30,54,.12);
   --border-on-navy: rgba(255,255,255,.14);
   --ring: rgba(63,188,192,.45);
@@ -53,18 +53,19 @@ p{margin:0 0 .6rem}
 .sidefoot .email:hover{color:var(--text)}
 .content{padding:22px;display:grid;place-items:center}
 
-/* ---- Card / Hero ---- */
+/* ---- Cards ---- */
 .card{
   background:var(--card);border:1px solid var(--border-on-navy);
   border-radius:18px;box-shadow:var(--shadow);padding:18px
 }
-/* White hero card for more contrast/whitespace */
 .card.light{
   background:var(--surface); color:var(--ink);
   border:1px solid var(--border);
 }
-.card.light a{color:var(--brand)}
-.card.light .btn{color:#0b1020}
+/* IMPORTANT: don’t recolor button links inside light cards */
+.card.light a:not(.btn):not(.email-btn){ color: var(--brand); }
+
+/* Tags / lead */
 .tag{
   display:inline-flex;align-items:center;gap:8px;
   background:rgba(60,188,192,.12);color:#0B1E36;
@@ -73,30 +74,46 @@ p{margin:0 0 .6rem}
 }
 .sub{color:var(--muted-ink);max-width:72ch}
 
-/* Offerings: compact A1 grid of mini‑accordions */
+/* ---- Hero ---- */
+.hero{
+  max-width:1000px;display:grid;gap:12px;
+  align-content:center
+}
+
+/* ---- Intro pitch ---- */
+.intro-pitch{ margin: 1.2rem 0; color: var(--ink); }
+.intro-pitch p{ margin: .4rem 0; }
+
+/* ---- Offerings: compact mini‑accordions ---- */
 .offerings-grid{
-  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:10px;margin-top:6px
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: .6rem;
 }
 .offer{
-  background:#F7FAFC;border:1px solid var(--border);border-radius:12px;
-  padding:0;color:var(--ink)
+  background:#0F2444;          /* dark navy pill */
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:0;color:var(--text);
+  box-shadow: var(--shadow);
 }
 .offer summary{
   list-style:none;cursor:pointer;user-select:none;
-  padding:10px 12px;position:relative;font-weight:600
+  padding:12px 14px;position:relative;font-weight:700;
+  color:#E8F1FF;
 }
 .offer summary::-webkit-details-marker{display:none}
 .offer summary::after{
-  content:"+";position:absolute;right:12px;top:50%;transform:translateY(-50%);
-  color:var(--brand);font-weight:700
+  content:"+";position:absolute;right:14px;top:50%;transform:translateY(-50%);
+  color:var(--brand);font-weight:800
 }
 .offer[open] summary::after{content:"–"}
 .offer p{
-  padding:0 12px 12px 12px;margin:0;color:var(--muted-ink);font-size:.95rem
+  padding:0 14px 12px 14px;margin:0;color:#C9D4E6;font-size:.96rem
 }
 
-/* Soft outcomes */
+/* ---- Lists (soft outcomes) ---- */
 .bullets.soft{
   display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
   gap:10px;margin:8px 0 6px 0;padding:0;list-style:none
@@ -106,37 +123,27 @@ p{margin:0 0 .6rem}
   padding:10px 12px;color:var(--ink)
 }
 
-/* CTA: single primary + inline email */
-.actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:4px}
-.btn, 
-.email-btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #1ABC9C; /* Teal background */
-  color: #0B1E36; /* Navy blue text */
-  font-weight: 600;
-  border-radius: 6px;
-  text-decoration: none;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
-}
+/* ---- CTAs ---- */
+.actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:8px}
 
-.btn:hover, 
-.email-btn:hover {
-  background-color: #16a085; /* Slightly darker teal on hover */
-  color: #062540; /* Darker navy text */
+/* Unified button style (teal bg, navy text) */
+.btn, .email-btn{
+  display:inline-block;
+  padding:.75rem 1.5rem;
+  background-color: var(--brand); /* teal */
+  color: var(--ink);              /* navy text */
+  font-weight:600;border-radius:8px;text-decoration:none;
+  box-shadow:0 2px 6px rgba(0,0,0,.15);
+  transition: background-color .2s ease, transform .2s ease, color .2s ease;
+}
+.btn:hover, .email-btn:hover{
+  background-color: var(--brand-2);
+  color:#062540; /* deeper navy on hover */
   transform: translateY(-2px);
-}
-
-/* Hero sizing to reduce scrolling on laptops */
-.hero{
-  max-width:1000px;display:grid;gap:12px;
-  align-content:center
 }
 
 /* ---- Responsive ---- */
 @media (max-width: 1200px){
-  .offerings-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .bullets.soft{grid-template-columns:1fr 1fr}
 }
 @media (max-width: 900px){
@@ -146,92 +153,11 @@ p{margin:0 0 .6rem}
   .offerings-grid,.bullets.soft{grid-template-columns:1fr}
 }
 
-.intro-pitch {
-  margin: 2rem 0;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: var(--muted);
+/* ---- Contact page helpers ---- */
+.contact-card{
+  background:#fff;border-radius:16px;
+  padding:2rem;max-width:600px;margin:3rem auto;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);text-align:center
 }
-
-.offerings-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
-}
-
-.offerings-grid details {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: var(--shadow);
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.offerings-grid details:hover {
-  background: var(--panel);
-}
-
-.offerings-grid summary {
-  font-weight: 600;
-  color: var(--text);
-  cursor: pointer;
-}
-
-.offerings-grid p {
-  margin: 0.5rem 0 0;
-  font-size: 0.95rem;
-  color: var(--muted);
-}
-
-.intro-pitch p {
-  margin: 0.5rem 0;   /* tighten vertical spacing */
-}
-
-.intro-pitch {
-  color: #111; /* deep grey/black for good readability */
-  font-size: 1.05rem; 
-  line-height: 1.6;
-}
-
-.intro-pitch { color: var(--ink); }
-.intro-pitch p { margin: 0.4rem 0; }
-
-.contact-card {
-      background: #fff;
-      border-radius: 16px;
-      padding: 2rem;
-      max-width: 600px;
-      margin: 3rem auto;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-      text-align: center;
-    }
-    .contact-card h1 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      color: #0B1E36;
-    }
-    .contact-card p {
-      font-size: 1rem;
-      margin-bottom: 1.5rem;
-      color: #333;
-    }
-
-.email-btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #1ABC9C; /* Teal background */
-  color: #0B1E36; /* Dark blue text */
-  font-weight: 600;
-  border-radius: 6px;
-  text-decoration: none;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
-}
-
-.email-btn:hover {
-  background-color: #16a085; /* Slightly darker teal on hover */
-  color: #062540; /* Even darker blue text on hover */
-  transform: translateY(-2px);
-}
+.contact-card h1{font-size:1.8rem;margin-bottom:1rem;color:#0B1E36}
+.contact-card p{font-size:1rem;margin-bottom:1.5rem;color:#333}
