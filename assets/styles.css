@@ -134,3 +134,43 @@ p{margin:0 0 .6rem}
   .content{padding:16px}
   .offerings-grid,.bullets.soft{grid-template-columns:1fr}
 }
+
+.intro-pitch {
+  margin: 2rem 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.offerings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.offerings-grid details {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.offerings-grid details:hover {
+  background: var(--panel);
+}
+
+.offerings-grid summary {
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.offerings-grid p {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
