@@ -157,3 +157,11 @@ p { margin: 0 0 .8rem; }
   .content { padding: 20px; }
   .grid.three, .grid.four { grid-template-columns: 1fr; }
 }
+
+.logo-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;   /* optional if you want rounded corners */
+  object-fit: contain;  /* keeps proportions */
+}
+
