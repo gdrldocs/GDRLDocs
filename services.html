@@ -1,0 +1,119 @@
+<!-- FILE: services.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services – GDRLdocs</title>
+  <meta name="description" content="Writing, editing, and formatting services for any industry — technical documentation, curriculum, UX writing, content & blogs, copywriting, ghostwriting, scripts, ebook formatting, and proofreading." />
+  <meta name="theme-color" content="#0B1E36" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidenav" aria-label="Primary">
+      <a class="brand" href="/" aria-label="GDRLdocs Home">
+        <img src="/assets/logo.jpg" alt="GDRLdocs logo" class="logo-img" />
+        <span class="brand-text">
+          <strong>GDRLdocs</strong>
+          <em>Great Documentation in Refined Language</em>
+        </span>
+      </a>
+      <nav>
+        <a href="/index.html">Home</a>
+        <a class="active" href="/services.html">Services</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+      <footer class="sidefoot">
+        <a class="email" href="mailto:contact@gdrldocs.com">contact@gdrldocs.com</a>
+        <small>© <span id="year"></span> GDRLdocs</small>
+      </footer>
+    </aside>
+
+    <!-- Main -->
+    <main id="main" class="content">
+      <section class="card light hero" aria-labelledby="svc-title">
+        <p class="tag">Writing • Editing • Formatting</p>
+        <h1 id="svc-title">Services</h1>
+        <p class="sub">
+          From technical docs to brand copy, from curriculum to ebooks—if it’s English, we write it right. 
+          Pick a category below to see what’s included.
+        </p>
+
+        <!-- Mini‑accordion grid -->
+        <div class="offerings-grid" style="margin-top: .8rem">
+          <details class="offer" id="technical-docs">
+            <summary>Technical Documentation</summary>
+            <p><strong>Deliverables:</strong> User/admin/solution guides, API/reference, how‑tos, release notes, in‑app help.</p>
+            <p><strong>We ensure:</strong> task-first structure, versioning, style consistency, docs-as-code or Docs CMS workflows.</p>
+          </details>
+
+          <details class="offer" id="curriculum">
+            <summary>Curriculum & Learning Content</summary>
+            <p><strong>Deliverables:</strong> Lesson plans, facilitator guides, assessments, worksheets, scripts, workbooks.</p>
+            <p><strong>We ensure:</strong> outcomes alignment, scaffolding, accessibility notes, and print/web-ready files.</p>
+          </details>
+
+          <details class="offer" id="ux-writing">
+            <summary>UX Writing & Microcopy</summary>
+            <p><strong>Deliverables:</strong> UI strings, tooltips, empty/error states, onboarding flows, V/T guidelines.</p>
+            <p><strong>We ensure:</strong> clarity, brevity, and consistency with your product language and tone.</p>
+          </details>
+
+          <details class="offer" id="content-blogs">
+            <summary>Content & Blogs</summary>
+            <p><strong>Deliverables:</strong> Articles, newsletters, case studies, SEO briefs, founder letters, thought leadership.</p>
+            <p><strong>We ensure:</strong> clear angles, credible sources, and an editorial calendar if you need one.</p>
+          </details>
+
+          <details class="offer" id="copywriting">
+            <summary>Copywriting</summary>
+            <p><strong>Deliverables:</strong> Landing pages, ad copy, taglines, product messaging, email campaigns.</p>
+            <p><strong>We ensure:</strong> crisp positioning, strong CTAs, and brand‑consistent voice.</p>
+          </details>
+
+          <details class="offer" id="ghostwriting">
+            <summary>Ghostwriting</summary>
+            <p><strong>Deliverables:</strong> Executive blogs, LinkedIn posts, op‑eds, keynote scripts—your voice, our words.</p>
+            <p><strong>We ensure:</strong> voice discovery, topic pipeline, and review cycles that fit your schedule.</p>
+          </details>
+
+          <details class="offer" id="scripts">
+            <summary>Scripts (Promo/Voice‑over)</summary>
+            <p><strong>Deliverables:</strong> Short promos (20–60s), explainer video scripts, social reels, YouTube VO scripts.</p>
+            <p><strong>We ensure:</strong> storyboard‑friendly beats, timing notes, and clear VO directions.</p>
+          </details>
+
+          <details class="offer" id="ebook-formatting">
+            <summary>Ebook Formatting</summary>
+            <p><strong>Deliverables:</strong> KDP/EPUB layout, TOC, front/back matter, image handling, print‑ready PDFs.</p>
+            <p><strong>We ensure:</strong> device compatibility, clean typography, and metadata setup.</p>
+          </details>
+
+          <details class="offer" id="editing-proof">
+            <summary>Editing & Proofreading</summary>
+            <p><strong>Options:</strong> line edit, copyedit, style/consistency check, final proofread.</p>
+            <p><strong>We ensure:</strong> correctness, clarity, and adherence to your style guide (or we’ll create one).</p>
+          </details>
+        </div>
+
+        <!-- Single CTA -->
+        <div class="actions" style="margin-top:12px">
+          <a class="email-btn" href="mailto:contact@gdrldocs.com">Email us to get started</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
