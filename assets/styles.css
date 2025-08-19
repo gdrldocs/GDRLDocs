@@ -174,3 +174,13 @@ p{margin:0 0 .6rem}
   color: var(--muted);
 }
 
+.intro-pitch p {
+  margin: 0.5rem 0;   /* tighten vertical spacing */
+}
+
+.intro-pitch {
+  color: #111; /* deep grey/black for good readability */
+  font-size: 1.05rem; 
+  line-height: 1.6;
+}
+
