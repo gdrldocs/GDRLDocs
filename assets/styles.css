@@ -210,16 +210,17 @@ p{margin:0 0 .6rem}
 .email-btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background-color: #1ABC9C; /* Teal */
-  color: #fff;
+  background-color: #1ABC9C; /* Teal background */
+  color: #0B1E36; /* Dark blue text */
   font-weight: 600;
   border-radius: 6px;
   text-decoration: none;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
 }
 
 .email-btn:hover {
-  background-color: #16a085; /* Darker teal */
+  background-color: #16a085; /* Slightly darker teal on hover */
+  color: #062540; /* Even darker blue text on hover */
   transform: translateY(-2px);
 }
