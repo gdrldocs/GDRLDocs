@@ -187,4 +187,38 @@ p{margin:0 0 .6rem}
 .intro-pitch { color: var(--ink); }
 .intro-pitch p { margin: 0.4rem 0; }
 
-
+.contact-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 2rem;
+      max-width: 600px;
+      margin: 3rem auto;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+    .contact-card h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #0B1E36;
+    }
+    .contact-card p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+    .email-btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      background: #0B1E36;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: all 0.2s ease-in-out;
+    }
+    .email-btn:hover {
+      background: #12345a;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
