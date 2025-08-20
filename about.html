@@ -1,0 +1,88 @@
+<!-- FILE: about.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About – GDRLdocs</title>
+  <meta name="description" content="GDRLdocs turns complex ideas into clear, credible content. Brand‑focused studio for writing, editing, and formatting across industries." />
+  <meta name="theme-color" content="#0B1E36" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidenav" aria-label="Primary">
+      <a class="brand" href="/" aria-label="GDRLdocs Home">
+        <img src="/assets/logo.jpg" alt="GDRLdocs logo" class="logo-img" />
+        <span class="brand-text">
+          <strong>GDRLdocs</strong>
+          <em>Great Documentation in Refined Language</em>
+        </span>
+      </a>
+      <nav>
+        <a href="/index.html">Home</a>
+        <a href="/services.html">Services</a>
+        <a class="active" href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+      <footer class="sidefoot">
+        <a class="email" href="mailto:contact@gdrldocs.com">contact@gdrldocs.com</a>
+        <small>© <span id="year"></span> GDRLdocs</small>
+      </footer>
+    </aside>
+
+    <!-- Main -->
+    <main id="main" class="content">
+      <section class="card light hero" aria-labelledby="about-title">
+        <p class="tag">Writing • Editing • Formatting</p>
+        <h1 id="about-title">About GDRLdocs</h1>
+
+        <p>
+          At GDRLdocs, we believe that the right words do more than inform: they connect, inspire, and simplify.
+          Our purpose is clear: to turn complex ideas into content that people can understand, trust, and act upon.
+        </p>
+
+        <p>
+          We are not just about filling pages with text. We are about building clarity. Whether it is technical
+          documentation, training material, marketing copy, or long‑form projects like ebooks and ghostwriting,
+          our approach stays the same. We listen closely, write with precision, and deliver content that works for
+          your audience.
+        </p>
+
+        <h2>Our Philosophy</h2>
+        <ul class="bullets soft">
+          <li><strong>Clarity first:</strong> Every word has a job: to explain, guide, or persuade.</li>
+          <li><strong>Collaboration always:</strong> We treat writing as a partnership aligned to your goals.</li>
+          <li><strong>Standards matter:</strong> From tone to structure, we follow industry best practices for reliability and professionalism.</li>
+        </ul>
+
+        <h2>What Sets Us Apart</h2>
+        <ul class="bullets soft">
+          <li>Solutions‑driven approach across domains.</li>
+          <li>Balance of creativity and structure for accuracy and impact.</li>
+          <li>End‑to‑end ownership: drafting, editing, and formatting through delivery.</li>
+        </ul>
+
+        <p>
+          Whether you need user‑friendly technical guides, persuasive brand copy, or polished manuscripts,
+          GDRLdocs is here to craft writing that makes an impact.
+        </p>
+
+        <div class="actions" style="margin-top:12px">
+          <a class="email-btn" href="mailto:contact@gdrldocs.com">Email us to get started</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
