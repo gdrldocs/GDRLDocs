@@ -1,203 +1,100 @@
 /* FILE: /assets/styles.css */
 
-/* ---- Brand palette (navy–white–teal, with more white in content) ---- */
+/* ---- Brand palette ---- */
 :root{
-  --bg: #0B1E36;        /* deep navy backdrop */
-  --panel: #0B1E36;     /* sidebar/nav background */
-  --card: #122540;      /* navy card surface */
-  --surface: #FFFFFF;   /* white content surfaces */
-  --ink: #0B1E36;       /* text on white */
-  --text: #FFFFFF;      /* text on navy */
-  --muted: #B0B8C4;     /* secondary on navy */
-  --muted-ink: #4B5A73; /* secondary on white */
-  --brand: #3CBCC0;     /* teal accent */
-  --brand-2: #16A085;   /* darker teal hover */
-  --border: rgba(11,30,54,.12);
-  --border-on-navy: rgba(255,255,255,.14);
-  --ring: rgba(63,188,192,.45);
-  --shadow: 0 10px 30px rgba(0,0,0,.45);
+  --bg:#0B1E36;--panel:#0B1E36;--card:#122540;--surface:#fff;
+  --ink:#0B1E36;--text:#fff;--muted:#B0B8C4;--muted-ink:#4B5A73;
+  --brand:#3CBCC0;--brand-2:#16A085;--border:rgba(11,30,54,.12);
+  --border-on-navy:rgba(255,255,255,.14);--ring:rgba(63,188,192,.45);
+  --shadow:0 10px 30px rgba(0,0,0,.45);
 }
 
 *{box-sizing:border-box}
-html,body{
-  margin:0;padding:0;background:var(--bg);color:var(--text);
-  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55
-}
-a{color:var(--brand);text-decoration:none}
-a:hover{text-decoration:underline}
-h1{margin:.2rem 0 .6rem;font-size:2rem}
-p{margin:0 0 .6rem}
-
-/* Accessibility */
-.skip{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
-.skip:focus{left:12px;top:12px;width:auto;height:auto;padding:8px 10px;background:var(--brand);color:#07343a;border-radius:8px;z-index:9999}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}
+a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
+h1{margin:.2rem 0 .6rem;font-size:2rem}p{margin:0 0 .6rem}
 
 /* ---- Layout ---- */
 .layout{display:grid;grid-template-columns:280px 1fr;min-height:100vh}
-.sidenav{
-  position:sticky;top:0;align-self:start;height:100vh;
-  padding:18px;display:flex;flex-direction:column;gap:14px;
-  background:var(--panel);border-right:1px solid var(--border-on-navy)
-}
+.sidenav{position:sticky;top:0;height:100vh;padding:18px;display:flex;flex-direction:column;gap:14px;
+  background:var(--panel);border-right:1px solid var(--border-on-navy)}
 .brand{display:grid;grid-template-columns:40px 1fr;gap:10px;align-items:center;padding:8px;border-radius:12px}
-.brand:hover{background:rgba(255,255,255,.06);text-decoration:none}
+.brand:hover{background:rgba(255,255,255,.06)}
 .logo-img{width:40px;height:40px;border-radius:8px;object-fit:contain;background:#0B1E36}
 .brand-text strong{display:block;font-weight:700}
 .brand-text em{display:block;font-style:normal;font-size:12px;color:var(--muted)}
 .sidenav nav{display:flex;flex-direction:column;gap:6px}
 .sidenav nav a{padding:10px 12px;border-radius:10px;color:var(--text)}
-.sidenav nav a:hover{background:rgba(255,255,255,.08);text-decoration:none}
+.sidenav nav a:hover{background:rgba(255,255,255,.08)}
 .sidenav nav a.active{background:rgba(255,255,255,.10);font-weight:600}
 .sidefoot{margin-top:auto;display:grid;gap:6px;color:var(--muted);font-size:12px}
-.sidefoot .email{color:var(--muted)}
-.sidefoot .email:hover{color:var(--text)}
+.sidefoot .email{color:var(--muted)}.sidefoot .email:hover{color:var(--text)}
 .content{padding:22px;display:grid;place-items:center}
 
 /* ---- Cards ---- */
-.card{
-  background:var(--card);border:1px solid var(--border-on-navy);
-  border-radius:18px;box-shadow:var(--shadow);padding:18px
-}
-.card.light{
-  background:var(--surface); color:var(--ink);
-  border:1px solid var(--border);
-}
-/* Don’t recolor normal links inside light cards */
-.card.light a:not(.btn):not(.email-btn){ color: var(--brand); }
+.card{background:var(--card);border:1px solid var(--border-on-navy);
+  border-radius:18px;box-shadow:var(--shadow);padding:18px}
+.card.light{background:var(--surface);color:var(--ink);border:1px solid var(--border)}
+.card.light a:not(.btn):not(.email-btn){color:var(--brand)}
 
-/* Tags / lead */
-.tag{
-  display:inline-flex;align-items:center;gap:8px;
-  background:rgba(60,188,192,.12);color:#0B1E36;
-  border:1px solid rgba(60,188,192,.32);
-  padding:6px 10px;border-radius:999px;font-size:12px;font-weight:600
-}
+.tag{display:inline-flex;align-items:center;gap:8px;background:rgba(60,188,192,.12);
+  color:#0B1E36;border:1px solid rgba(60,188,192,.32);padding:6px 10px;border-radius:999px;
+  font-size:12px;font-weight:600}
 .sub{color:var(--muted-ink);max-width:72ch}
+.hero{max-width:1000px;display:grid;gap:12px;align-content:center}
 
-/* ---- Hero ---- */
-.hero{ max-width:1000px;display:grid;gap:12px;align-content:center }
+/* ================= HOME ================== */
+.offerings-list{margin:1rem 0;padding-left:0;list-style:none}
+.offering{margin:.25rem 0}
+.offering-toggle{all:unset;cursor:pointer;font-weight:600;line-height:1.5;position:relative;
+  padding-left:1.5rem;color:var(--ink)}
+.offering-toggle::before{content:"➤";position:absolute;left:0;top:0;font-size:.9rem;
+  transition:transform .2s ease;color:var(--ink)}
+.offering-toggle[aria-expanded="true"]::before{transform:rotate(90deg)}
+.offering-toggle:hover{text-decoration:underline}
+.offering-toggle:focus-visible{outline:2px solid var(--ring);outline-offset:2px;border-radius:4px}
+.offering-panel{margin:.3rem 0 .6rem 1.5rem;padding-left:.5rem;border-left:2px solid #e0e6ef;
+  color:#25364d;font-size:.95rem}
 
-/* ---- Intro pitch ---- */
-.intro-pitch{ margin:1.2rem 0; color:var(--ink) }
-.intro-pitch p{ margin:.4rem 0 }
+/* ================= SERVICES ================== */
+.offerings-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1rem;margin-top:.8rem}
+.offer{background:#0F2444;border:1px solid var(--border);border-radius:12px;
+  padding:0;color:var(--text);box-shadow:var(--shadow)}
+.offer summary{list-style:none;cursor:pointer;user-select:none;padding:12px 14px;
+  position:relative;font-weight:700;color:#E8F1FF}
+.offer summary::-webkit-details-marker{display:none}
+.offer summary::after{content:"+";position:absolute;right:14px;top:50%;
+  transform:translateY(-50%);color:var(--brand);font-weight:800}
+.offer[open] summary::after{content:"–"}
+.offer p{padding:0 14px 12px;margin:0;color:#C9D4E6;font-size:.96rem}
 
-/* ===================================================================== */
-/* === HOME: Expandable, plain‑text bullet list (arrow marker)         ===*/
-/* ===================================================================== */
-.offerings-list{
-  margin:1rem 0;
-  padding-left:0;       /* remove default bullets/indent */
-  list-style:none;
-}
-.offering{ margin:.25rem 0 }
+/* ================= ABOUT ================== */
+.bullets.soft{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:10px;margin:8px 0;padding:0;list-style:none}
+.bullets.soft li{background:#F4F7FB;border:1px dashed var(--border);border-radius:12px;
+  padding:10px 12px;color:var(--ink);font-size:.95rem}
 
-/* Toggle looks like plain text with a custom arrow marker */
-.offering-toggle{
-  all:unset;                  /* no button box */
-  cursor:pointer;
-  font-weight:600;
-  line-height:1.5;
-  position:relative;
-  padding-left:1.5rem;        /* space for marker */
-  color:var(--ink);
-}
-.offering-toggle::before{
-  content:"➤";                /* arrow bullet */
-  position:absolute; left:0; top:0;
-  font-size:.9rem;
-  transition:transform .2s ease;
-  color:var(--ink);
-}
-.offering-toggle[aria-expanded="true"]::before{
-  transform:rotate(90deg);    /* points down when open */
-}
-.offering-toggle:hover{ text-decoration:underline }
-.offering-toggle:focus-visible{
-  outline:2px solid var(--ring);
-  outline-offset:2px;border-radius:4px
-}
-.offering-panel{
-  margin:.3rem 0 .6rem 1.5rem; /* indent under bullet */
-  padding-left:.5rem;
-  border-left:2px solid #e0e6ef;
-  color:#25364d; font-size:.95rem
-}
-
-/* ===================================================================== */
-/* === SERVICES: Accordions (details/summary inside .offerings-grid)   ===*/
-/* ===================================================================== */
-.offerings-grid{
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
-  margin-top: .8rem;
-}
-.offer{
-  background:#0F2444; border:1px solid var(--border);
-  border-radius:12px; padding:0; color:var(--text);
-  box-shadow: var(--shadow);
-}
-.offer summary{
-  list-style:none; cursor:pointer; user-select:none;
-  padding:12px 14px; position:relative; font-weight:700; color:#E8F1FF
-}
-.offer summary::-webkit-details-marker{ display:none }
-.offer summary::after{
-  content:"+"; position:absolute; right:14px; top:50%; transform:translateY(-50%);
-  color:var(--brand); font-weight:800
-}
-.offer[open] summary::after{ content:"–" }
-.offer p{
-  padding:0 14px 12px 14px; margin:0; color:#C9D4E6; font-size:.96rem
-}
-
-/* ---- Lists (soft outcomes) ---- */
-.bullets.soft{
-  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:10px;margin:8px 0 6px 0;padding:0;list-style:none
-}
-.bullets.soft li{
-  background:#F4F7FB;border:1px dashed var(--border);border-radius:12px;
-  padding:10px 12px;color:var(--ink)
-}
-
-/* ---- CTAs ---- */
-.actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:12px}
-
-/* Button look for Email CTAs (anchors with class .email-btn) */
-.btn, .email-btn{
-  display:inline-block;
-  padding:.75rem 1.5rem;
-  background-color:var(--brand);
-  color:var(--ink);
-  font-weight:600;border-radius:10px;text-decoration:none;
-  box-shadow:0 2px 6px rgba(0,0,0,.15);
-  transition:background-color .2s ease, transform .2s ease, color .2s ease;
-}
-.btn:hover, .email-btn:hover{
-  background-color:var(--brand-2);
-  color:#062540;
-  transform:translateY(-2px);
-}
-
-/* ---- Contact page helpers (centered card) ---- */
-.contact-card{
-  background:#fff;border-radius:16px;
-  padding:2rem;max-width:600px;margin:3rem auto;
-  box-shadow:0 8px 20px rgba(0,0,0,.08);text-align:center
-}
+/* ================= CONTACT ================== */
+.contact-card{background:#fff;border-radius:16px;padding:2rem;max-width:600px;margin:3rem auto;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);text-align:center}
 .contact-card h1{font-size:1.8rem;margin-bottom:1rem;color:#0B1E36}
 .contact-card p{font-size:1rem;margin-bottom:1.5rem;color:#333}
 
+/* ---- CTAs ---- */
+.actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:12px}
+.btn,.email-btn{display:inline-block;padding:.75rem 1.5rem;background-color:var(--brand);
+  color:var(--ink);font-weight:600;border-radius:10px;text-decoration:none;
+  box-shadow:0 2px 6px rgba(0,0,0,.15);
+  transition:background-color .2s ease,transform .2s ease,color .2s ease}
+.btn:hover,.email-btn:hover{background-color:var(--brand-2);color:#062540;transform:translateY(-2px)}
+
 /* ---- Responsive ---- */
-@media (max-width:1200px){
-  .bullets.soft{grid-template-columns:1fr 1fr}
-}
-@media (max-width:900px){
+@media(max-width:1200px){.bullets.soft{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){
   .layout{grid-template-columns:1fr}
   .sidenav{position:static;height:auto;border-right:none;border-bottom:1px solid var(--border-on-navy)}
   .content{padding:16px}
   .offerings-grid,.bullets.soft{grid-template-columns:1fr}
 }
-
-/* ===== End of file ===== */
