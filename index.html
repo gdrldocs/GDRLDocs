@@ -80,4 +80,88 @@
             <button class="offering-toggle" aria-expanded="false" aria-controls="offer-content">
               Content &amp; Blogs
             </button>
-            <div id="offer-content" class="offering-panel" hidd
+            <div id="offer-content" class="offering-panel" hidden>
+              <p>Articles, newsletters, case studies, SEO briefs, and founder letters.</p>
+            </div>
+          </li>
+
+          <li class="offering">
+            <button class="offering-toggle" aria-expanded="false" aria-controls="offer-copywriting">
+              Copywriting
+            </button>
+            <div id="offer-copywriting" class="offering-panel" hidden>
+              <p>Landing pages, ad copy, taglines, product messaging, and emails.</p>
+            </div>
+          </li>
+
+          <li class="offering">
+            <button class="offering-toggle" aria-expanded="false" aria-controls="offer-ghostwriting">
+              Ghostwriting
+            </button>
+            <div id="offer-ghostwriting" class="offering-panel" hidden>
+              <p>Executive blogs, LinkedIn posts, keynote scripts, and more. Your voice, our words.</p>
+            </div>
+          </li>
+
+          <li class="offering">
+            <button class="offering-toggle" aria-expanded="false" aria-controls="offer-scripts">
+              Scripts (Promo/Voice‑over)
+            </button>
+            <div id="offer-scripts" class="offering-panel" hidden>
+              <p>Promos, explainer videos, reels, and YouTube voice‑over scripts.</p>
+            </div>
+          </li>
+
+          <li class="offering">
+            <button class="offering-toggle" aria-expanded="false" aria-controls="offer-ebooks">
+              Ebook Formatting
+            </button>
+            <div id="offer-ebooks" class="offering-panel" hidden>
+              <p>KDP/EPUB layout, TOC, images, front and back matter, print‑ready.</p>
+            </div>
+          </li>
+
+          <li class="offering">
+            <button class="offering-toggle" aria-expanded="false" aria-controls="offer-editing">
+              Editing &amp; Proofreading
+            </button>
+            <div id="offer-editing" class="offering-panel" hidden>
+              <p>Line edit, copyedit, style and consistency checks, final proof.</p>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Single clear CTA -->
+        <div class="actions">
+          <a class="email-btn" href="mailto:contact@gdrldocs.com">Email us to get started</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Expandable bullets: independent toggle (not accordion)
+    const toggles = document.querySelectorAll('.offering-toggle');
+    toggles.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const panel = document.getElementById(btn.getAttribute('aria-controls'));
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        panel.hidden = expanded;
+      });
+
+      // Optional: close on Escape when focused inside panel
+      const panel = document.getElementById(btn.getAttribute('aria-controls'));
+      panel.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          btn.setAttribute('aria-expanded', 'false');
+          panel.hidden = true;
+          btn.focus();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
