@@ -84,33 +84,54 @@ p{margin:0 0 .6rem}
 .intro-pitch{ margin: 1.2rem 0; color: var(--ink); }
 .intro-pitch p{ margin: .4rem 0; }
 
-/* ---- Offerings: compact mini‑accordions ---- */
-.offerings-grid{
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
-  margin-top: .6rem;
+/* ===================================================================== */
+/* === HOME: Offerings as expandable, plain-text bullets (NOT accordion) */
+/* ===================================================================== */
+
+.offerings-list{
+  margin:1rem 0;
+  padding-left:0;       /* custom markers; remove default padding */
+  list-style:none;
 }
-.offer{
-  background:#0F2444;          /* dark navy pill */
-  border:1px solid var(--border);
-  border-radius:12px;
-  padding:0;color:var(--text);
-  box-shadow: var(--shadow);
+.offering{ margin:.25rem 0; }
+
+/* Toggle looks like plain text with a custom arrow marker */
+.offering-toggle{
+  all:unset;                  /* remove button styling (no boxes) */
+  cursor:pointer;
+  font-weight:600;
+  line-height:1.5;
+  position:relative;
+  padding-left:1.5rem;        /* space for marker */
+  color:var(--ink);
 }
-.offer summary{
-  list-style:none;cursor:pointer;user-select:none;
-  padding:12px 14px;position:relative;font-weight:700;
-  color:#E8F1FF;
+.offering-toggle::before{
+  content:"➤";                /* arrow marker */
+  position:absolute;
+  left:0; top:0;
+  font-size:.9rem;
+  transition:transform .2s ease;
+  color:var(--ink);
 }
-.offer summary::-webkit-details-marker{display:none}
-.offer summary::after{
-  content:"+";position:absolute;right:14px;top:50%;transform:translateY(-50%);
-  color:var(--brand);font-weight:800
+.offering-toggle[aria-expanded="true"]::before{
+  transform:rotate(90deg);    /* points down when open */
 }
-.offer[open] summary::after{content:"–"}
-.offer p{
-  padding:0 14px 12px 14px;margin:0;color:#C9D4E6;font-size:.96rem
+
+/* Hover/focus feedback */
+.offering-toggle:hover{ text-decoration:underline; }
+.offering-toggle:focus-visible{
+  outline:2px solid var(--ring);
+  outline-offset:2px;
+  border-radius:4px;
+}
+
+/* The expandable body */
+.offering-panel{
+  margin:.3rem 0 .6rem 1.5rem;  /* indent under the bullet text */
+  padding-left:.5rem;
+  border-left:2px solid #e0e6ef;
+  color:#25364d;
+  font-size:.95rem;
 }
 
 /* ---- Lists (soft outcomes) ---- */
@@ -130,15 +151,15 @@ p{margin:0 0 .6rem}
 .btn, .email-btn{
   display:inline-block;
   padding:.75rem 1.5rem;
-  background-color: var(--brand); /* teal */
-  color: var(--ink);              /* navy text */
+  background-color: var(--brand);
+  color: var(--ink);
   font-weight:600;border-radius:8px;text-decoration:none;
   box-shadow:0 2px 6px rgba(0,0,0,.15);
   transition: background-color .2s ease, transform .2s ease, color .2s ease;
 }
 .btn:hover, .email-btn:hover{
   background-color: var(--brand-2);
-  color:#062540; /* deeper navy on hover */
+  color:#062540;
   transform: translateY(-2px);
 }
 
@@ -150,7 +171,7 @@ p{margin:0 0 .6rem}
   .layout{grid-template-columns:1fr}
   .sidenav{position:static;height:auto;border-right:none;border-bottom:1px solid var(--border-on-navy)}
   .content{padding:16px}
-  .offerings-grid,.bullets.soft{grid-template-columns:1fr}
+  .bullets.soft{grid-template-columns:1fr}
 }
 
 /* ---- Contact page helpers ---- */
@@ -162,56 +183,4 @@ p{margin:0 0 .6rem}
 .contact-card h1{font-size:1.8rem;margin-bottom:1rem;color:#0B1E36}
 .contact-card p{font-size:1rem;margin-bottom:1.5rem;color:#333}
 
-
-/* ===== Offerings: cleaner expandable bullets ===== */
-.offerings-list {
-  margin: 1rem 0;
-  padding-left: 1.25rem;
-  list-style: none; /* remove default disc bullets */
-}
-
-.offering {
-  margin: 0.25rem 0;
-}
-
-/* Make toggle look like plain text with custom marker */
-.offering-toggle {
-  all: unset;               /* reset browser styles */
-  cursor: pointer;
-  font-weight: 500;
-  line-height: 1.5;
-  position: relative;
-  padding-left: 1.5rem;     /* space for marker */
-  color: #0B1E36;
-}
-
-.offering-toggle::before {
-  content: "➤";             /* arrow marker */
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 0.9rem;
-  transition: transform 0.2s ease;
-  color: #0B1E36;           /* brand navy */
-}
-
-.offering-toggle[aria-expanded="true"]::before {
-  transform: rotate(90deg); /* rotate arrow when expanded */
-}
-
-/* Hover/focus feedback */
-.offering-toggle:hover,
-.offering-toggle:focus-visible {
-  color: #0056b3; /* lighter accent on hover */
-  text-decoration: underline;
-  outline: none;
-}
-
-/* Expandable content panel */
-.offering-panel {
-  margin: 0.3rem 0 0.6rem 1.5rem;
-  padding-left: 0.5rem;
-  border-left: 2px solid #e0e6ef;
-  color: #25364d;
-  font-size: 0.95rem;
-}
+/* ===== End of file ===== */
